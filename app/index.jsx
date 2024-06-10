@@ -20,11 +20,11 @@ export default function App() {
                 renderItem={({ item,index }) => (
                     <View>
                         {/* <Text>{index}</Text> */}
-                        <Text>{item}</Text>
+                        <Text style={{color:"red",fontSize:30,borderColor:"blue",height:50,width:120,borderWidth:4,marginTop:8,marginLeft:8}}>{item}</Text>
                     </View>
                 )}
                 renderSectionHeader={({ section: { title } }) => (
-                    <Text>{title}</Text>
+                    <Text style={{color:"blue",fontSize:40,borderColor:"red",height:70,width:140,borderWidth:4}}>{title}</Text>
                 )}
             />
         </View>
