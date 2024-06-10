@@ -11,7 +11,7 @@ export default function App() {
             justifyContent: "center", // flex-start | center | flex-end 
             // space-evenly | space-between | space-around 
 
-            // to center horizontally
+            // to center horizontally-----------------------------------------------------------------
             alignContent: "center"   // flex-start | center | flex-end | stretch
             // space-evenly | space-between | space-around 
 
