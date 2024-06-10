@@ -1,86 +1,32 @@
-import { Text, View } from 'react-native';
+import { View, Text, SectionList } from 'react-native'
+import React from 'react'
 
 export default function App() {
+    const Data = [
+        {
+            title: 'Sports',
+            data: ['Cricket', 'Football', 'Chess', 'Hockey']
+        },
+        {
+            title: 'Players',
+            data: ['Virat', 'Rohit', 'Hardik', 'Rinku']
+        }
+    ]
     return (
-        <View style={{
-            height: 500,
-            width: "100%",
-            backgroundColor: "skyblue",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "center", // flex-start | center | flex-end 
-            // space-evenly | space-between | space-around 
-
-            // to center horizontally-----------------------------------------------------------------
-            alignContent: "center"   // flex-start | center | flex-end | stretch
-            // space-evenly | space-between | space-around 
-
-
-        }}>
-            <View style={{
-                height: 80,
-                width: 80,
-                alignSelf: "center",
-                backgroundColor: "silver",
-                // flexGrow: 2     // flex property
-            }}>
-                <Text style={{justifyContent:"center"}}>
-                    1
-                </Text>
-
-            </View>
-            <View style={{
-                height: 80,
-                width: 80,
-                backgroundColor: "red",
-                // flexGrow: 1       // flex property
-            }}>
-                <Text>
-                    2
-                </Text>
-
-            </View>
-            <View style={{
-                height: 80,
-                width: 80,
-                backgroundColor: "green"
-            }}>
-                <Text>
-                    3
-                </Text>
-
-            </View>
-            <View style={{
-                height: 80,
-                width: 80,
-                backgroundColor: "pink"
-            }}>
-                <Text>
-                    4
-                </Text>
-
-            </View>
-            <View style={{
-                height: 80,
-                width: 80,
-                backgroundColor: "grey"
-            }}>
-                <Text>
-                    5
-                </Text>
-
-            </View>
-            <View style={{
-                height: 80,
-                width: 80,
-                backgroundColor: "orange"
-            }}>
-                <Text>
-                    6
-                </Text>
-
-            </View>
-
+        <View>
+            <SectionList
+                sections={Data}
+                keyExtractor={(item, index) => item + index}
+                renderItem={({ item,index }) => (
+                    <View>
+                        {/* <Text>{index}</Text> */}
+                        <Text>{item}</Text>
+                    </View>
+                )}
+                renderSectionHeader={({ section: { title } }) => (
+                    <Text>{title}</Text>
+                )}
+            />
         </View>
     )
 }
