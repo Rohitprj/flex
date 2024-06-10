@@ -11,7 +11,8 @@ export default function App() {
             justifyContent: "center", // flex-start | center | flex-end 
             // space-evenly | space-between | space-around 
 
-            alignContent: "stretch"   // flex-start | center | flex-end | stretch
+            // to center horizontally
+            alignContent: "center"   // flex-start | center | flex-end | stretch
             // space-evenly | space-between | space-around 
 
 
@@ -21,9 +22,9 @@ export default function App() {
                 width: 80,
                 alignSelf: "center",
                 backgroundColor: "silver",
-                flexGrow: 2     // flex property
+                // flexGrow: 2     // flex property
             }}>
-                <Text>
+                <Text style={{justifyContent:"center"}}>
                     1
                 </Text>
 
@@ -32,7 +33,7 @@ export default function App() {
                 height: 80,
                 width: 80,
                 backgroundColor: "red",
-                flexGrow: 1       // flex property
+                // flexGrow: 1       // flex property
             }}>
                 <Text>
                     2
